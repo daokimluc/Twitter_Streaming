@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Twitter Trends</title>
+</head>
+
+<br>
+    <h1 id="title"> Trending Tweets</h1>
+    <h3 id="info">Enter country/city name :</h3>
+    <form method="POST" action="/trends">
+        <div class="button-container-div">
+            <input id="input" type="country" name="username"><br><br>
+            <button id="button" type="submit" value="Submit">Submit</button>
+            <br><br>
+        </div>
+    </form>
+    <form method="POST" action="/streamTweets">
+        <div class="button-container-div">
+            <button id="button" type="submit">Stream Real Time Tweets</button>
+        </div>
+    </form>
+    <div class="row">
+        <div class="column left">
+            <img src="{{url_for('static', filename='images/bird.png')}}" id="bird" />
+        </div>
+        <div class="column middle">
+            <h2 id="info2">Made by - </h2>
+                <h1 id="title2">Madhur Mittal</h1>
+        </div>
+        <div class="column right">
+            <img src="{{url_for('static', filename='images/bird_2.png')}}" id="bird" />
+        </div>
+    </div>
+</body>
+
+</html>
